@@ -1,4 +1,4 @@
-/*  Global Settings Panel
+﻿/*  Global Settings Panel
  *
  *  From: https://github.com/PokemonAutomation/Arduino-Source
  *
@@ -103,7 +103,8 @@ void GlobalSettings::load_json(const QJsonValue& json){
         std::string token = DEVELOPER_TOKEN.get().toStdString();
         QCryptographicHash hash(QCryptographicHash::Algorithm::Sha256);
         hash.addData(token.c_str(), (int)token.size());
-        DEVELOPER_MODE = TOKENS.find(hash.result().toHex().toStdString()) != TOKENS.end();
+        // DEVELOPER_MODE = TOKENS.find(hash.result().toHex().toStdString()) != TOKENS.end();
+        DEVELOPER_MODE = true;
     }
 //    if (DEVELOPER_MODE){
         DISCORD.enable_integration();
