@@ -101,9 +101,7 @@ bool DoublesLeveling::find_encounter(SingleSwitchProgramEnvironment& env) const{
     int result = run_until(
         env, env.console,
         [&](const BotBaseContext& context){
-            while (true){
-                TRIGGER_METHOD.run_trigger(context);
-            }
+            TRIGGER_METHOD.run_trigger_non_stop(context);
         },
         {
             &battle_menu_detector,

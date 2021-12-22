@@ -16,16 +16,23 @@ namespace PokemonAutomation{
 namespace NintendoSwitch{
 namespace PokemonBDSP{
 
-
+// Program component to trigger an overworld encounter.
 class OverworldTrigger : public GroupOption{
 public:
     OverworldTrigger();
 
-    void run_trigger(const BotBaseContext& context) const;
+    // Run the encounter commands non stop.
+    // Need to launch other async code to detect when battle starts, otherwise
+    // it will run forever.
+    void run_trigger_non_stop(const BotBaseContext& context) const;
+
+    // Run one basic unit of encounter command, like move up and down once.
+    void run_trigger_once(const BotBaseContext& context) const;
 
 public:
     EnumDropdownOption TRIGGER_METHOD;
     TimeExpressionOption<uint16_t> MOVE_DURATION;
+    EnumDropdownOption SWEET_SCENT_POKEMON_LOCATION;
 };
 
 
