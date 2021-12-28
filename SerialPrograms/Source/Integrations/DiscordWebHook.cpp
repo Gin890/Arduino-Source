@@ -16,7 +16,7 @@
 #include "Common/Cpp/PrettyPrint.h"
 #include "CommonFramework/GlobalSettingsPanel.h"
 #include "CommonFramework/Tools/Logger.h"
-#include "DiscordWebhook.h"
+#include "DiscordWebHook.h"
 
 #include <iostream>
 using std::cout;

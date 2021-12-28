@@ -10,7 +10,7 @@
 #include "Common/Cpp/PrettyPrint.h"
 #include "CommonFramework/Globals.h"
 #include "CommonFramework/GlobalSettingsPanel.h"
-#include "Integrations/DiscordWebhook.h"
+#include "Integrations/DiscordWebHook.h"
 #include "Integrations/SleepyDiscordRunner.h"
 #include "ProgramNotifications.h"
 
